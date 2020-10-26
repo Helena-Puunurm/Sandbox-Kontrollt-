@@ -1,0 +1,76 @@
+:root {
+    --main-padding: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr 3fr 2fr 0.8fr;
+    grid-template-areas: 
+    "header"
+    "footer1 footer2 footer3"
+    "sign up"
+    "content";
+    gap: 5px;
+}
+
+header {
+    background: cadetblue;
+    padding: var(--main-padding);
+    grid-area: nav;
+}
+
+.sign_up {
+    background: darkslategray;
+    padding: var(--main-padding);
+    grid-area: main;
+}
+
+#sidebar {
+    background: rgb(88, 151, 79);
+    padding: var(--main-padding);
+    grid-area: sidebar;
+}
+
+#footer1 {
+    background: rgb(245, 180, 82);
+    padding: var(--main-padding);
+    grid-area: content1;
+}
+
+#footer2 {
+    background: rgb(18, 141, 125);
+    padding: var(--main-padding);
+    grid-area: content2;
+}
+
+#fooer3 {
+    background: rgb(223, 107, 72);
+    padding: var(--main-padding);
+    grid-area: content3;
+}
+
+footer {
+    background: rgb(27, 240, 211);
+    padding: var(--main-padding);
+    grid-area: footer;
+}
+
+#sidebar {
+    display: none;
+}
+
+
+#sidebar {
+    display: block;
+}
